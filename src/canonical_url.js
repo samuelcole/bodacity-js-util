@@ -123,7 +123,7 @@ function canonical_url(url, options) {
 
 	var start = get_base(options) || get_relative(options);
 
-	if (url.charAt(0) == '/') {
+	if (url[0] == '/') {
 		var all_but_path_match = RE_ALL_BUT_PATH.exec(start);
 		return clean_url(all_but_path_match[1] + url);
 	}
